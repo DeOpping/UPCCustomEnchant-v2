@@ -1,19 +1,52 @@
 plugins {
     id 'java'
+    id 'net.minecrell.plugin-yml.bukkit' version '0.5.2'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
+
 
 group 'dev.deopping'
-version '1.0-SNAPSHOT'
+version '1.0.0'
+
 
 repositories {
+    // EXP4j
+    maven { url = 'https://repo.codemc.org/repository/maven-public/' }
+
+    // XSeries
+    maven { url = 'https://jitpack.io' }
+
+    // PlaceholderAPI
+    maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+
     mavenCentral()
+    mavenLocal()
 }
+
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    compileOnly 'org.spigotmc:spigot-api:1.8-R0.1-SNAPSHOT'
+    implementation 'net.objecthunter:exp4j:0.4.8'
+    implementation 'com.github.cryptomorin:XSeries:9.1.0'
+    compileOnly 'me.clip:placeholderapi:2.11.2'
+    compileOnly files ('libs/helper.jar')
+    compileOnly files ('libs/UltraPrisonCore-1.12.7.17-RELEASE.jar')
 }
 
-test {
-    useJUnitPlatform()
+
+bukkit {
+    main = "dev.deopping.customenchant.Core"
+    apiVersion = "1.13"
+    authors = ['Mantice']
+    softDepend = ['UltraPrisonCore', 'PlaceholderAPI']
 }
+
+
+shadowJar {
+    minimize()
+    relocate 'net.objecthunter.exp4j', 'dev.deopping.customenchant.libs.exp4j'
+    relocate 'com.cryptomorin.xseries', 'dev.deopping.customenchant.libs.xseries'
+}
+
+
+assemble.dependsOn shadowJar
