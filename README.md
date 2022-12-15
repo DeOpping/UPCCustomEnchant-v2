@@ -3,12 +3,12 @@ First off, thank you for viewing my Github page!
 
 If you'd like to get in contact with me, you may join my Discord: https://discord.deopping.dev
 
-This is a tutorial plugin for how to create a custom enchant for UltraPrisonCore!
-Video tutorial & explanation: https://youtu.be/G2ENfqKUMEw
+This is a tutorial plugin for how to create a custom enchant for UltraPrisonCore!<br>
+Video tutorial & explanation: [https://youtu.be/G2ENfqKUMEw](https://youtu.be/HZD46f9Jffk)<br>
 UltraPrisonCore's Discord: https://discord.com/invite/9bRjBxKC6y
 
 Disclaimer:
-UltraPrisonCore is created by Drawethree, not me, I have no access to the SRC (source code) of UltraPrisonCore, this tutorial is utilizing its API that is free to anyone who has purchased UltraPrisonCore!
+UltraPrisonCore is created by Drawethree, not me, I have no access to the SRC (source code) of UltraPrisonCore, this tutorial is utilizing its API that is free to anyone who has purchased UltraPrisonCore!<br><br>
 
 Purchase UltraPrisonCore from one of the following links (your preferred marketplace):
 - SpigotMC: https://www.spigotmc.org/resources/flash-sale-⚡ultra-prison-core-⚡%EF%B8%8F-1-8-1-18-all-in-one-solution-for-your-prison-server.86845/
